@@ -52,6 +52,9 @@ class DMCast extends DM {
     constructor(title, main, cast) {
         super(title, main);
         this.cast = cast;
+        static create(t, m, c){
+            return new DMCast(t, m, c);
+          }
     }
 }
 const mulan3 = new DMCast(`Mulan`, `Fa Mulan`,
@@ -70,3 +73,16 @@ const tangled3 = new DMCast(`Tangled`, `Rapunzel`,
     }
 );
 console.log(tangled3);
+
+//6
+const moana = DMCast.create(
+    `Moana`,
+    `Moana of Motunui`,
+    {
+      moana: `Auli'i Cravalho`,
+      maui: `Dwayne Johnson`,
+      grammaTala: `Rachel House`,
+      chiefTui: `Temuera Morrison`
+    }
+  );
+  console.log(moana);
